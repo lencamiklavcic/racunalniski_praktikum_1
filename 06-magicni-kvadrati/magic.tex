@@ -8,6 +8,8 @@
 \usepackage{url}
 \usepackage{booktabs}
 
+\newcommand{\m}{\mathcal{M}}
+
 {\theoremstyle{definition}
 \newtheorem{definicija}{Definicija}
 }
@@ -72,14 +74,14 @@ Prirejeno po:
    stolpca ali vsa števila v katerikoli od glavnih diagonal.
 \end{definicija}
 
-Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}. % sklic: table:mag3
+Primer magičnega kvadrata reda 3 je prikazan v tabeli~\ref{table:mag3}. % sklic: table:mag3
 
 % - napis nad tabelo: Magični kvadrat reda 3
 % - oznaka: table:mag3
 % Začetek magičnega kvadrata
 
 
-\begin{table}
+\begin{table}[!ht]
    \centering
    \caption{Magični kvadrat reda 3}
    \large
@@ -102,7 +104,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}. % sklic
    \end{equation}
 \end{definicija}
 
-Magični kvadrat v tabeli \ref{table:mag3} je normalen.
+Magični kvadrat v tabeli~\ref{table:mag3} je normalen.
 To je tudi najmanjši netrivialen normalen magični kvadrat.
 Poleg normalnih magičnih kvadratov so zanimivi tudi magični kvadrati praštevil. % sklic: table:mag3
 
@@ -186,7 +188,7 @@ in zato kvadrat ni normalen.
        % oznaka: eq:mc
        % Okolje `equation` je že prikazni matematični način,
        % zato tu izraz vpišite brez `\[` in `\]`.
-       !!
+         \m _2(n) = \frac{1}{2}{n(n^2+1)}.
     \end{equation}
   \end{izrek}
 % Konec okolja izrek
@@ -195,21 +197,23 @@ in zato kvadrat ni normalen.
 
 \begin{proof}
       V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
-      števil (glej \eqref{eq:numbers} na strani \pageref{eq:numbers}) enaka
-      !!. Ker imamo
+      števil (glej~\eqref{eq:numbers} na strani~\pageref{eq:numbers}) enaka
+      \(1+2+3+\ldots+n^2=\sum_{k=1}^{n^2}k=\frac{1}{2}n^2(n^2+1)\). Ker imamo
       v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
-      enaka številu \(M_2(n)\). 
+      enaka številu \(\m _2(n)\). 
 \end{proof}% sklica: eq:numbers, eq:numbers
 % Konec dokaza
 
-Preprost račun pokaže, da je konstanti \eqref{eq:mc} analogna konstanta
-\(M_2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
+Preprost račun pokaže, da je konstanti~\eqref{eq:mc} analogna konstanta
+\(\m _2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
 \(A\), \(A+D\), \(A+2D\), \ldots, \(A+(n^2-1)D\), enaka % sklic: eq:mc
-!!
+\[
+\m _2(n;A,D) =\frac{1}{2}n\left (2A + D(n^2-1)\right )
+\]. 
 
 \begin{definicija}
       Če vsako od števil v normalnem magičnem kvadratu reda \(n\) odštejemo
-      od števila !!, dobimo nov magični kvadrat, ki je prvotnemu
+      od števila \(n^2+1\), dobimo nov magični kvadrat, ki je prvotnemu
       \emph{komplementaren}.
 \end{definicija}
 
@@ -218,7 +222,7 @@ Preprost račun pokaže, da je konstanti \eqref{eq:mc} analogna konstanta
       iz drugega s pomočjo zasukov oziroma zrcaljenj.
 \end{definicija}
 
-Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli \ref{table:stevila}.
+Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli~\ref{table:stevila}.
 % sklic: table:stevila
 
 % - napis nad tabelo: Število različnih normalnih magičnih kvadratov
@@ -234,7 +238,7 @@ Preprost račun pokaže, da je konstanti \eqref{eq:mc} analogna konstanta
             red& 1 &2 &3 &4 &5 &6 \\
             % Decimalno vejico v matematičnem načinu zapišite kot {,},
             % sicer jo LaTeX izpiše kot ločilo, s presledkom za njo.
-            število kvadratov &1 &0 &1 &880 &275305224 &!! \\\bottomrule
+            število kvadratov &1 &0 &1 &880 &275305224 &\((1{,}7745\pm 0{,}0016)10^{19}\) \\\bottomrule
    \end{tabular}
    \label{table:stevila}
 \end{table}
